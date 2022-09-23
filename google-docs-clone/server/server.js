@@ -1,4 +1,11 @@
+const dotenv = require("dotenv");
+dotenv.config();
+
+const express = require("express");
+const app = express();
+const PORT = process.env.PORT || 8000;
 require("./config/mongoose.config");
+
 const Document = require("./models/documents.model");
 
 const { default: mongoose } = require("mongoose");
@@ -37,3 +44,7 @@ async function findOrCreateDocument(id) {
   if (document) return document;
   return await Document.create({ _id: id, data: defaultValue });
 }
+
+app.listen(PORT, () =>
+  console.log(`Server is running in ${process.env.NODE_ENV} on PORT ${PORT}`)
+);

@@ -12,8 +12,9 @@
     "social",
     "react",
     "react.js",
-    "socket.io",
-    "full-stack"
+    "node",
+    "node.js",
+    "socket.io"
   ],
   "author": "Keith Hetrick",
   "license": "ISC",

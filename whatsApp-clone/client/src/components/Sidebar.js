@@ -18,7 +18,7 @@ const Sidebar = ({ id }) => {
   }
 
   return (
-    <div className="d-flex flex-column" style={{ width: "250px" }}>
+    <div style={{ width: "250px" }} className="d-flex flex-column">
       <Tab.Container activeKey={activeKey} onSelect={setActiveKey}>
         <Nav variant="tabs" className="justify-content-center">
           <Nav.Item>
